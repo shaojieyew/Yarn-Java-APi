@@ -1,20 +1,19 @@
-# Yarn-Java-Api
-java wrapper on yarn rest api
-
-
-```
-YarnAppQuery.builder("http://localhost","8088")
+public class Main {
+    public static void main(String arg[]){
+        YarnAppQuery
+                .builder("http://localhost","8088")
                 .setApplicationId("application_1610802627554_0004")
                 .get()
                 .stream().forEach(x->System.out.println(x.getId()+" "+x.getName()));
 
-YarnAppQuery.builder("http://localhost","8088")
+        YarnAppQuery.builder("http://localhost","8088")
                 .setStates("RUNNING")
                 .setQueue("default")
                 .get()
                 .stream().forEach(x->System.out.println(x.getId()+" "+x.getName()));
 
-YarnAppQuery.builder("http://localhost","8088")
+        YarnAppQuery.builder("http://localhost","8088")
                 .setApplicationId("application_1610802627554_0004")
                 .kill();
-```
+    }
+}
