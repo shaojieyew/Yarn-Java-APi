@@ -1,5 +1,4 @@
-# Yarn-Java-Api
-java wrapper on yarn rest api
+# Yarn API wrapper in Java
 
 
 ```
